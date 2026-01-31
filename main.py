@@ -45,7 +45,7 @@ if resposta1 == "s":
 
 def enviar_email(valor_atual, email):
     msg = EmailMessage()
-    msg['Subject'] = "🚨 ALERTA: Oportunidade no Dólar!"
+    msg['Subject'] = "ALERTA: Oportunidade no Dólar!"
     msg['From'] = "Seu email aqui"
     msg['To'] = email
     msg.set_content(f"O dólar atingiu R$ {valor_atual:.4f}. Hora de conferir!")
