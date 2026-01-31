@@ -1,19 +1,22 @@
-# Monitor de Câmbio em Tempo Real:
+# Monitor de Câmbio em Tempo Real (USD → BRL)
 
-- Conexão: O programa se conecta a uma API financeira real para buscar o preço mais recente.
-- Memória: Ele lê um arquivo historico.json para saber qual era o preço da última vez que ele verificou.
-- Inteligência (Lógica): Ele compara o preço novo com o antigo e decide se o dólar subiu, caiu ou estabilizou.
-- Automação: Em vez de você rodar o script toda hora, ele fica rodando sozinho em um loop infinito, verificando o preço a cada 30 segundos (ou o tempo que você definir).
-- Registro: Ele salva o novo preço no arquivo para a próxima comparação.
+Este projeto é um script em **Python** que monitora o valor do dólar em tempo real utilizando uma **API financeira pública**, registra o histórico localmente e pode **enviar alertas automáticos por e-mail** quando o dólar atingir um valor definido pelo usuário.
 
-- Agora ele também consegue enviar emails.
-- Primeiro ele irá perguntar se você gostaria de receber o email, caso recuse, ele apenas ficará mostrando os dados no monitor. Caso aceite, ele perguntará qual o seu email, e ele só aceitará se tiver um "@" no email e termine com ".com"
-- Em seguida ele pedirá o valor que você gostaria de ser avisado quando o dólar chegar neste valor
--
-- ===============================================
+---
+
+## Funcionalidades
+
+- Conexão com uma API financeira real para obter o valor atual do dólar (USD → BRL)
+- Persistência de dados utilizando um arquivo `historico.json`
+- Análise automática da variação do dólar (subiu, caiu ou permaneceu estável)
+- Execução contínua com atualização a cada 30 segundos
+- Envio de alertas por e-mail quando o dólar atinge um valor desejado
+- Sistema anti-spam: o e-mail só é enviado uma vez por queda
+
+- - ===============================================
 -
 - d/m/ano h:m:s
 - O valor do dólar é : x.x
 - O valor antigo do dólar é : x.x
-- O dólar subiu/está estável/caiu
+- O dólar subiu/está estável/caiu x.x
 - Aguardando 30 segundos...
