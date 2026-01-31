@@ -52,7 +52,7 @@ def enviar_email(valor_atual, email):
 
     # Configuração do Servidor (Exemplo Gmail)
     with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
-        smtp.login('dimitri.d.deccache@gmail.com', 'jpbc fubh dsii odde')
+        smtp.login('dimitri.d.deccache@gmail.com', 'sua senha aqui')
         smtp.send_message(msg)
         print("E-mail enviado com sucesso!")
 
